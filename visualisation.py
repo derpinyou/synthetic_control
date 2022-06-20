@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import datetime
 from typing import Callable, List, Optional, Tuple, Union
 
