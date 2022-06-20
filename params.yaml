@@ -1,0 +1,37 @@
+# дата начала эксперимента
+ab_start_date: '2021-04-21'
+
+ab:
+  a_account:
+  - *any*
+  
+  b_account:
+  - *any*
+
+
+train:
+  train_size: 0.9
+  short_days_period: 7
+  long_days_period: 30
+  first_n_short: 300
+  first_n_long: 300
+
+control:
+  alpha: 0.05
+  n_placebo: 10
+  cv:
+    start_date: '2021-04-01'
+    stop_date: '2021-04-30'
+
+  # во сколько раз должен loss превышать mean + std в плацебо на pre-intervention,
+  # чтобы НЕ отрисоваться
+  
+  error_plot_threshold: 1e2
+  
+  torch:
+    epochs: 4000
+    learning_rate: 1e-2
+    
+  model_start_date: '2021-12-02'
+  treated_clients:
+  - '*any*
